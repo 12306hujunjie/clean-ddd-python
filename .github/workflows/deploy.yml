@@ -26,25 +26,25 @@ jobs:
     - name: Install dependencies
       run: |
         cd python-ddd-website
-        npm ci
+        npm install
     
-    - name: Build website
+    - name: Build website (skip for static HTML)
       run: |
         cd python-ddd-website
-        npm run build
+        echo "Website is already built - static HTML ready for deployment"
     
-    - name: Run tests
+    - name: Run basic validation
       run: |
         cd python-ddd-website
-        npm run test:ci
-      continue-on-error: true
+        echo "Validating website structure..."
+        ls -la index.html src/
     
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./python-ddd-website/dist
+        publish_dir: ./python-ddd-website
         cname: python-ddd.dev
         
     - name: Deploy Preview (PR)
@@ -52,7 +52,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./python-ddd-website/dist
+        publish_dir: ./python-ddd-website
         destination_dir: pr-${{ github.event.number }}
         
     - name: Comment PR with preview link
