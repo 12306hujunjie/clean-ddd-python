@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Clean DDD 实践指南 - 分层思维的领域驱动设计</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-brand">
+                <h1 class="logo">Python Clean DDD</h1>
+                <span class="tagline">分层思维的领域驱动设计</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#learning-paths" class="nav-link">学习路径</a></li>
+                <li><a href="#concepts" class="nav-link">核心概念</a></li>
+                <li><a href="#examples" class="nav-link">实战示例</a></li>
+                <li><a href="#tools" class="nav-link">实用工具</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Python Clean DDD
+                    <span class="highlight">实践指南</span>
+                </h1>
+                <p class="hero-subtitle">
+                    基于分层思维的Python领域驱动设计实用指导<br>
+                    从新手到专家的完整学习体系
+                </p>
+                <div class="hero-cta">
+                    <a href="#quick-start" class="cta-primary">30秒快速开始</a>
+                    <a href="#learning-paths" class="cta-secondary">选择学习路径</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="architecture-diagram">
+                    <div class="layer layer-presentation">
+                        <span class="layer-icon">👥</span>
+                        <span class="layer-name">表现层</span>
+                        <span class="layer-desc">外部交互</span>
+                    </div>
+                    <div class="layer layer-application">
+                        <span class="layer-icon">🎯</span>
+                        <span class="layer-name">应用层</span>
+                        <span class="layer-desc">用例编排</span>
+                    </div>
+                    <div class="layer layer-domain">
+                        <span class="layer-icon">💎</span>
+                        <span class="layer-name">领域层</span>
+                        <span class="layer-desc">业务逻辑</span>
+                    </div>
+                    <div class="layer layer-infrastructure">
+                        <span class="layer-icon">🔧</span>
+                        <span class="layer-name">基础设施层</span>
+                        <span class="layer-desc">技术实现</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 30秒快速导航 -->
+    <section id="quick-start" class="quick-nav">
+        <div class="container">
+            <h2 class="section-title">🎯 30秒快速导航</h2>
+            <div class="quick-nav-grid">
+                <div class="quick-nav-card beginner">
+                    <div class="card-icon">🔰</div>
+                    <h3>完全新手？</h3>
+                    <p>从零开始的友好入门</p>
+                    <div class="nav-path">
+                        <a href="visual-guide.html" class="path-link">30秒理解DDD</a>
+                        <span class="arrow">→</span>
+                        <a href="beginner-guide.html" class="path-link">15分钟入门</a>
+                    </div>
+                </div>
+
+                <div class="quick-nav-card developer">
+                    <div class="card-icon">🛠️</div>
+                    <h3>有经验开发者？</h3>
+                    <p>直接解决设计问题</p>
+                    <div class="nav-path">
+                        <a href="decision-support.html" class="path-link">设计决策指南</a>
+                        <span class="arrow">→</span>
+                        <a href="examples.html" class="path-link">异步生产实现</a>
+                    </div>
+                </div>
+
+                <div class="quick-nav-card leader">
+                    <div class="card-icon">👔</div>
+                    <h3>团队负责人？</h3>
+                    <p>团队实施和管理</p>
+                    <div class="nav-path">
+                        <a href="team-standards.html" class="path-link">团队标准</a>
+                        <span class="arrow">→</span>
+                        <a href="production-guide.html" class="path-link">生产实施指南</a>
+                    </div>
+                </div>
+
+                <div class="quick-nav-card architect">
+                    <div class="card-icon">🏗️</div>
+                    <h3>系统架构师？</h3>
+                    <p>架构设计和理论深度</p>
+                    <div class="nav-path">
+                        <a href="architecture-overview.html" class="path-link">架构全景</a>
+                        <span class="arrow">→</span>
+                        <a href="advanced-patterns.html" class="path-link">高级模式</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Paths Section -->
+    <section id="learning-paths" class="learning-paths">
+        <div class="container">
+            <h2 class="section-title">📚 智能学习路径</h2>
+            <div class="learning-assessment">
+                <h3>快速评估：选择最适合你的学习路径</h3>
+                <div class="assessment-quiz">
+                    <div class="quiz-question">
+                        <p>你对DDD的了解程度：</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="ddd-level" value="beginner">
+                                <span>第一次听说DDD</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="ddd-level" value="basic">
+                                <span>了解基本概念</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="ddd-level" value="experienced">
+                                <span>有实际项目经验</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="quiz-question">
+                        <p>你的主要目标：</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="goal" value="learn">
+                                <span>学习理论概念</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="goal" value="implement">
+                                <span>解决实际项目问题</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="goal" value="team">
+                                <span>团队实施和管理</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="get-recommendation">获取推荐路径</button>
+                </div>
+            </div>
+
+            <div class="learning-paths-grid">
+                <div class="learning-path beginner-path">
+                    <div class="path-header">
+                        <span class="path-icon">🌱</span>
+                        <h3>新手友好路径</h3>
+                        <span class="time-estimate">⏱️ 2小时轻松上手</span>
+                    </div>
+                    <div class="path-content">
+                        <p>从零开始的渐进式学习体验，适合初学者和DDD新手</p>
+                        <div class="path-steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h4>理解问题</h4>
+                                    <a href="visual-guide.html">30秒理解DDD核心思想</a>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h4>动手实践</h4>
+                                    <a href="beginner-guide.html">15分钟新手友好指南</a>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h4>设计决策</h4>
+                                    <a href="decision-support.html">学会做DDD设计决策</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="learning-path developer-path">
+                    <div class="path-header">
+                        <span class="path-icon">⚡</span>
+                        <h3>开发者快速路径</h3>
+                        <span class="time-estimate">⏱️ 半天掌握核心技能</span>
+                    </div>
+                    <div class="path-content">
+                        <p>直接解决实际开发问题，快速应用到项目中</p>
+                        <div class="path-steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h4>设计决策</h4>
+                                    <a href="decision-support.html">具体设计决策指南</a>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h4>生产实现</h4>
+                                    <a href="examples.html">异步DDD实现示例</a>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h4>深度理论</h4>
+                                    <a href="advanced-patterns.html">高级模式和理论</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="learning-path team-path">
+                    <div class="path-header">
+                        <span class="path-icon">👥</span>
+                        <h3>团队实施路径</h3>
+                        <span class="time-estimate">⏱️ 1天制定完整计划</span>
+                    </div>
+                    <div class="path-content">
+                        <p>团队标准化实施，包含管理和技术决策</p>
+                        <div class="path-steps">
+                            <div class="step">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h4>团队标准</h4>
+                                    <a href="team-standards.html">建立开发标准</a>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h4>实施计划</h4>
+                                    <a href="production-guide.html">渐进实施路线</a>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h4>系统迁移</h4>
+                                    <a href="migration-guide.html">现有系统迁移</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Concepts Section -->
+    <section id="concepts" class="concepts">
+        <div class="container">
+            <h2 class="section-title">🧩 核心概念互动学习</h2>
+            <div class="concepts-intro">
+                <p>通过可视化和交互式示例深入理解DDD核心构建块</p>
+            </div>
+            
+            <div class="concepts-grid">
+                <div class="concept-card value-objects">
+                    <div class="concept-icon">💎</div>
+                    <h3>值对象</h3>
+                    <p>不可变的值，完全由其属性定义</p>
+                    <div class="concept-example">
+                        <code>Money(100, 'USD')</code>
+                        <code>Email('user@example.com')</code>
+                    </div>
+                    <a href="concepts/value-objects.html" class="concept-link">深入学习 →</a>
+                </div>
+
+                <div class="concept-card entities">
+                    <div class="concept-icon">📝</div>
+                    <h3>实体</h3>
+                    <p>有身份的对象，可以跟踪变化</p>
+                    <div class="concept-example">
+                        <code>User(id=123, name="John")</code>
+                        <code>Order(id=456, status="pending")</code>
+                    </div>
+                    <a href="concepts/entities.html" class="concept-link">深入学习 →</a>
+                </div>
+
+                <div class="concept-card aggregates">
+                    <div class="concept-icon">🏰</div>
+                    <h3>聚合</h3>
+                    <p>一致性边界，管理相关对象</p>
+                    <div class="concept-example">
+                        <code>OrderAggregate</code>
+                        <code>CustomerAggregate</code>
+                    </div>
+                    <a href="concepts/aggregates.html" class="concept-link">深入学习 →</a>
+                </div>
+
+                <div class="concept-card events">
+                    <div class="concept-icon">⚡</div>
+                    <h3>领域事件</h3>
+                    <p>业务事件，触发后续操作</p>
+                    <div class="concept-example">
+                        <code>UserRegisteredEvent</code>
+                        <code>OrderConfirmedEvent</code>
+                    </div>
+                    <a href="concepts/domain-events.html" class="concept-link">深入学习 →</a>
+                </div>
+
+                <div class="concept-card commands">
+                    <div class="concept-icon">📨</div>
+                    <h3>命令</h3>
+                    <p>用户意图，触发业务操作</p>
+                    <div class="concept-example">
+                        <code>CreateUserCommand</code>
+                        <code>PlaceOrderCommand</code>
+                    </div>
+                    <a href="concepts/commands.html" class="concept-link">深入学习 →</a>
+                </div>
+
+                <div class="concept-card queries">
+                    <div class="concept-icon">🔍</div>
+                    <h3>查询</h3>
+                    <p>读取数据，不改变状态</p>
+                    <div class="concept-example">
+                        <code>GetUserQuery</code>
+                        <code>OrderHistoryQuery</code>
+                    </div>
+                    <a href="concepts/queries.html" class="concept-link">深入学习 →</a>
+                </div>
+
+                <div class="concept-card controllers">
+                    <div class="concept-icon">🎮</div>
+                    <h3>控制器</h3>
+                    <p>协议适配，连接外部世界</p>
+                    <div class="concept-example">
+                        <code>UserController</code>
+                        <code>OrderController</code>
+                    </div>
+                    <a href="concepts/controllers.html" class="concept-link">深入学习 →</a>
+                </div>
+
+                <div class="concept-card architecture">
+                    <div class="concept-icon">🏗️</div>
+                    <h3>架构关系</h3>
+                    <p>要素间的协作与依赖</p>
+                    <div class="concept-example">
+                        <code>分层依赖关系</code>
+                        <code>协作模式</code>
+                    </div>
+                    <a href="concepts/architecture-relationships.html" class="concept-link">深入学习 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2 class="section-title">🛠️ 实用工具</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">🤔</div>
+                    <h3>设计决策助手</h3>
+                    <p>交互式决策树，帮你做出正确的DDD设计选择</p>
+                    <a href="tools/decision-assistant.html" class="tool-link">开始使用</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🎯</div>
+                    <h3>项目生成器</h3>
+                    <p>基于模板快速生成DDD项目结构</p>
+                    <a href="tools/project-generator.html" class="tool-link">生成项目</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <h3>架构检查器</h3>
+                    <p>验证你的代码是否符合DDD架构原则</p>
+                    <a href="tools/architecture-checker.html" class="tool-link">检查代码</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">📚</div>
+                    <h3>学习进度追踪</h3>
+                    <p>跟踪你的DDD学习进度和成就</p>
+                    <a href="tools/progress-tracker.html" class="tool-link">查看进度</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>学习路径</h4>
+                    <ul>
+                        <li><a href="visual-guide.html">30秒理解DDD</a></li>
+                        <li><a href="beginner-guide.html">新手友好指南</a></li>
+                        <li><a href="decision-support.html">设计决策支持</a></li>
+                        <li><a href="advanced-patterns.html">高级模式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>实用资源</h4>
+                    <ul>
+                        <li><a href="examples.html">代码示例</a></li>
+                        <li><a href="team-standards.html">团队标准</a></li>
+                        <li><a href="migration-guide.html">迁移指南</a></li>
+                        <li><a href="production-guide.html">生产指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>核心概念</h4>
+                    <ul>
+                        <li><a href="concepts/value-objects.html">值对象</a></li>
+                        <li><a href="concepts/entities.html">实体</a></li>
+                        <li><a href="concepts/aggregates.html">聚合</a></li>
+                        <li><a href="concepts/domain-events.html">领域事件</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>社区</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">GitHub Issues</a></li>
+                        <li><a href="#" target="_blank">讨论区</a></li>
+                        <li><a href="#" target="_blank">贡献指南</a></li>
+                        <li><a href="#" target="_blank">反馈建议</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Python Clean DDD 实践指南. 专为Python开发者设计的DDD学习平台.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -2,12 +2,22 @@
 
 > 基于分层思维的Python领域驱动设计实用指导
 
+## 🎯 30秒快速导航
+
+**🔰 完全新手？** → [30秒理解DDD](DDD_VISUAL_GUIDE.md) → [15分钟入门](BEGINNER_FRIENDLY_GUIDE.md)  
+**🛠️ 有经验开发者？** → [设计决策指南](DECISION_SUPPORT.md) → [异步生产实现](ASYNC_DDD_EXAMPLES.md)  
+**👔 团队负责人？** → [团队标准](TEAM_STANDARDS.md) → [生产实施指南](CLEAN_DDD_PRODUCTION_GUIDE.md)  
+**🏗️ 系统架构师？** → [架构全景](docs/00-architecture-overview.md) → [完整文档浏览](#完整学习路径)
+
 ## 🚀 快速开始（适合新手）
 
 **30分钟从零到生产级异步DDD示例**
 ```bash
+# 🎯 新手推荐：15分钟轻松入门
+📖 BEGINNER_FRIENDLY_GUIDE.md - 零基础友好，渐进式学习
+
 # 推荐：异步版本（解决性能瓶颈，生产级）
-📖 ASYNC_QUICK_START.md - 基于async/await的高性能DDD实现
+📖 ASYNC_DDD_EXAMPLES.md - 基于async/await的高性能DDD实现
 
 # 备选：同步版本（学习概念用）
 📖 QUICK_START.md - 传统同步模式，概念理解更直观

@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm install -g http-server
+        
+    - name: Build site
+      run: |
+        # 创建构建目录
+        mkdir -p dist
+        
+        # 复制所有静态文件
+        cp -r * dist/ || true
+        
+        # 删除不需要的文件
+        rm -rf dist/.git dist/.github dist/node_modules dist/package*.json || true
+        
+        # 创建 404 页面（GitHub Pages 需要）
+        cp dist/index.html dist/404.html || true
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        force_orphan: true
+        
+    - name: Test deployment
+      run: |
+        echo "Deployment completed successfully!"
+        echo "Site will be available at: https://${{ github.repository_owner }}.github.io/clean-ddd-python/"
