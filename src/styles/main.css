@@ -1,0 +1,82 @@
+/* Main CSS Entry Point */
+/* This file imports all other CSS modules in the correct order */
+
+/* 1. Reset and base styles */
+@import url('reset.css');
+
+/* 2. CSS Custom Properties */
+@import url('variables.css');
+
+/* 3. Layout and structure */
+@import url('layout.css');
+
+/* 4. Components and UI elements */
+@import url('components.css');
+
+/* 5. Responsive design */
+@import url('responsive.css');
+
+/* 6. Utility classes and helpers */
+@import url('utilities.css');
+
+/* 7. Theme-specific styles */
+@import url('themes.css');
+
+/* 8. Animation library */
+@import url('animations.css');
+
+/* Global styles that need to come after all imports */
+html {
+  scroll-padding-top: var(--header-height);
+}
+
+/* Smooth theme transitions */
+* {
+  transition: background-color var(--transition-normal), 
+              color var(--transition-normal), 
+              border-color var(--transition-normal);
+}
+
+/* Enhanced focus styles */
+.focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Skip to content for accessibility */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  z-index: var(--z-toast);
+  transition: top var(--transition-fast);
+}
+
+.skip-to-content:focus {
+  top: 6px;
+}
+
+/* Print optimization */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-break-before {
+    page-break-before: always;
+  }
+  
+  .print-break-after {
+    page-break-after: always;
+  }
+  
+  .print-break-inside-avoid {
+    page-break-inside: avoid;
+  }
+}
