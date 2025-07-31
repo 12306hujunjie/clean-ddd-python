@@ -1,0 +1,149 @@
+{
+  "name": "python-clean-ddd-website",
+  "version": "1.0.0",
+  "description": "Interactive learning platform for Python Clean DDD architecture and domain-driven design",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --host=localhost --open=index.html",
+    "build": "npm run build:css && npm run build:js && npm run optimize:images",
+    "build:css": "postcss src/styles/*.css --dir dist/css --use autoprefixer cssnano",
+    "build:js": "terser src/scripts/*.js --compress --mangle --output dist/js/bundle.min.js",
+    "optimize:images": "imagemin assets/images/* --out-dir=dist/images",
+    "test": "jest",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/scripts/*.js",
+    "lint:fix": "eslint src/scripts/*.js --fix",
+    "format": "prettier --write \"src/**/*.{js,css,html}\"",
+    "validate": "html-validate index.html",
+    "audit": "npm audit",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path reports/lighthouse.html",
+    "serve": "http-server -p 8080 -o",
+    "clean": "rimraf dist reports coverage",
+    "prebuild": "npm run clean",
+    "postbuild": "npm run validate:build",
+    "validate:build": "echo 'Build validation complete'",
+    "deploy": "gh-pages -d .",
+    "preview": "npm run build && npm run serve"
+  },
+  "keywords": [
+    "python",
+    "ddd",
+    "domain-driven-design",
+    "clean-architecture",
+    "software-architecture",
+    "learning-platform",
+    "interactive",
+    "education",
+    "tutorial",
+    "best-practices"
+  ],
+  "author": {
+    "name": "Python DDD Learning Platform",
+    "email": "contact@python-ddd.dev",
+    "url": "https://python-ddd.dev"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/clean-ddd-python.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/clean-ddd-python/issues"
+  },
+  "homepage": "https://python-ddd.dev",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.52.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "gh-pages": "^6.0.0",
+    "html-validate": "^8.5.0",
+    "http-server": "^14.1.1",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "lighthouse": "^11.2.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "terser": "^5.24.0"
+  },
+  "dependencies": {
+    "intersection-observer": "^0.12.2",
+    "prismjs": "^1.29.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"],
+    "testMatch": [
+      "<rootDir>/tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "src/scripts/**/*.js",
+      "!src/scripts/vendor/**",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": ["standard"],
+    "env": {
+      "browser": true,
+      "es2022": true,
+      "jest": true
+    },
+    "globals": {
+      "DDDUtils": "readonly",
+      "ThemeManager": "readonly",
+      "KnowledgeMapManager": "readonly",
+      "LearningPathManager": "readonly",
+      "CodeExamplesManager": "readonly",
+      "NavigationManager": "readonly"
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-debugger": "error",
+      "no-unused-vars": "warn",
+      "prefer-const": "error",
+      "no-var": "error"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 100,
+    "bracketSpacing": true,
+    "arrowParens": "avoid"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

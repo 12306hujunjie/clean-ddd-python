@@ -1,10 +1,57 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Claude Flow generated files
+# Build outputs
+dist/
+build/
+coverage/
+
+# Development files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Reports and documentation (should not be in repo)
+*_FIXES_REPORT.md
+*_REPORT.md
+CLEAN_DDD_FIXES_REPORT.md
+
+# Temporary files
+.tmp/
+temp/
+tmp/
+
+# Package manager
+package-lock.json
+yarn.lock
+
+# AI/Development tools - Claude Flow generated files
 .claude/settings.local.json
 .mcp.json
 claude-flow.config.json
 .swarm/
 .hive-mind/
+memory/
 memory/claude-flow-data.json
 memory/sessions/*
 !memory/sessions/README.md
