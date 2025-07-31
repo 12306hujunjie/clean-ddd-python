@@ -6,17 +6,17 @@
     <meta name="description" content="Python Clean DDD 学习平台 - 掌握领域驱动设计的最佳实践">
     <meta name="keywords" content="Python, DDD, 领域驱动设计, Clean Architecture, 软件架构">
     <title>Python Clean DDD 学习平台</title>
-    
+
     <!-- Favicon and Icons -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-    
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="src/styles/main.css">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -38,7 +38,7 @@
                     <span class="brand-text">Python DDD</span>
                 </a>
             </div>
-            
+
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
@@ -73,12 +73,12 @@
                     </li>
                 </ul>
             </div>
-            
+
             <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="切换主题">
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="切换主题">
                     <i class="fas fa-moon"></i>
                 </button>
-                <button class="nav-toggle" id="nav-toggle" aria-label="切换菜单">
+                <button type="button" class="nav-toggle" id="nav-toggle" aria-label="切换菜单">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -99,15 +99,17 @@
                             <br>构建可维护的企业应用
                         </h1>
                         <p class="hero-description">
-                            从零开始学习领域驱动设计(DDD)和整洁架构，通过实战项目和最佳实践，
-                            构建高质量、可扩展的Python应用程序。
+                            学习如何将领域驱动设计(DDD)与整洁架构(Clean Architecture)完美融合。
+                            构建框架无关、可测试、可维护的Python企业应用程序。
+                            <br><br>
+                            <strong>Clean DDD = DDD + Clean Architecture</strong> - 业务逻辑与框架解耦，遵循依赖规则。
                         </p>
                         <div class="hero-actions">
-                            <button class="btn btn-primary" data-action="start-learning">
+                            <button type="button" class="btn btn-primary" data-action="start-learning">
                                 <i class="fas fa-play"></i>
                                 开始学习
                             </button>
-                            <button class="btn btn-secondary" data-action="view-docs">
+                            <button type="button" class="btn btn-secondary" data-action="view-docs">
                                 <i class="fas fa-book-open"></i>
                                 查看文档
                             </button>
@@ -119,7 +121,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Stats Section -->
                 <div class="stats-section">
                     <div class="stats-container">
@@ -142,7 +144,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Features Section -->
             <div class="features-section">
                 <div class="container">
@@ -154,22 +156,22 @@
                             </div>
                             <h3 class="feature-title">系统化学习</h3>
                             <p class="feature-description">
-                                从基础概念到高级模式，循序渐进的学习路径，
-                                确保每个知识点都能扎实掌握。
+                                从 Clean Architecture 基础到高级 Clean DDD 模式，循序渐进的学习路径。
+                                始终强调框架无关性和依赖规则，确保每个知识点都能扎实掌握。
                             </p>
                         </div>
-                        
+
                         <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                             <div class="feature-icon">
                                 <i class="fas fa-code"></i>
                             </div>
                             <h3 class="feature-title">实战导向</h3>
                             <p class="feature-description">
-                                丰富的代码示例和实际项目，理论与实践相结合，
-                                快速提升编程能力。
+                                丰富的 Clean DDD 代码示例和实际项目，所有代码都遵循 Clean Architecture 原则。
+                                理论与实践相结合，快速掌握框架无关的领域建模技能。
                             </p>
                         </div>
-                        
+
                         <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                             <div class="feature-icon">
                                 <i class="fas fa-users"></i>
@@ -189,12 +191,13 @@
         <section id="knowledge-map" class="section section-knowledge-map">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">DDD 知识地图</h2>
+                    <h2 class="section-title">Clean DDD 知识地图</h2>
                     <p class="section-subtitle">
-                        交互式知识地图，帮你理清DDD的核心概念和关系
+                        交互式知识地图，展示 Clean DDD 核心概念及其在 Clean Architecture 中的关系
+                        <br><small>📝 <strong>重要</strong>：所有概念都以 Clean Architecture 原则为基础，传统 DDD 概念仅作参考</small>
                     </p>
                 </div>
-                
+
                 <div class="knowledge-map-container">
                     <div class="map-controls">
                         <div class="control-group">
@@ -215,9 +218,9 @@
                                 <option value="architecture">架构模式</option>
                             </select>
                         </div>
-                        <button class="btn btn-small" id="reset-map">重置视图</button>
+                        <button type="button" class="btn btn-small" id="reset-map">重置视图</button>
                     </div>
-                    
+
                     <div class="map-canvas" id="knowledge-map-canvas">
                         <!-- Interactive knowledge map will be rendered here -->
                         <div class="map-loading">
@@ -225,7 +228,7 @@
                             <p>正在加载知识地图...</p>
                         </div>
                     </div>
-                    
+
                     <div class="map-legend">
                         <h4>图例说明</h4>
                         <div class="legend-items">
@@ -244,12 +247,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Concept Detail Panel -->
                 <div class="concept-detail-panel" id="concept-detail-panel">
                     <div class="panel-header">
                         <h3 class="panel-title">概念详情</h3>
-                        <button class="panel-close" id="close-panel">
+                        <button type="button" class="panel-close" id="close-panel" aria-label="关闭概念详情面板">
                             <i class="fas fa-times"></i>
                         </button>
                     </div>
@@ -281,24 +284,24 @@
                         根据你的经验水平，选择合适的学习路径
                     </p>
                 </div>
-                
+
                 <div class="path-selector">
                     <div class="path-tabs">
-                        <button class="path-tab active" data-path="beginner">
+                        <button type="button" class="path-tab active" data-path="beginner">
                             <i class="fas fa-seedling"></i>
                             <span>初学者路径</span>
                         </button>
-                        <button class="path-tab" data-path="intermediate">
+                        <button type="button" class="path-tab" data-path="intermediate">
                             <i class="fas fa-chart-line"></i>
                             <span>进阶路径</span>
                         </button>
-                        <button class="path-tab" data-path="expert">
+                        <button type="button" class="path-tab" data-path="expert">
                             <i class="fas fa-crown"></i>
                             <span>专家路径</span>
                         </button>
                     </div>
                 </div>
-                
+
                 <div class="learning-paths">
                     <!-- Beginner Path -->
                     <div class="learning-path active" id="beginner-path">
@@ -311,12 +314,12 @@
                                 <span class="stat"><i class="fas fa-trophy"></i> 项目数：3个</span>
                             </div>
                         </div>
-                        
+
                         <div class="path-timeline">
                             <!-- Timeline items will be populated by JavaScript -->
                         </div>
                     </div>
-                    
+
                     <!-- Intermediate Path -->
                     <div class="learning-path" id="intermediate-path">
                         <div class="path-overview">
@@ -328,12 +331,12 @@
                                 <span class="stat"><i class="fas fa-trophy"></i> 项目数：2个</span>
                             </div>
                         </div>
-                        
+
                         <div class="path-timeline">
                             <!-- Timeline items will be populated by JavaScript -->
                         </div>
                     </div>
-                    
+
                     <!-- Expert Path -->
                     <div class="learning-path" id="expert-path">
                         <div class="path-overview">
@@ -345,19 +348,19 @@
                                 <span class="stat"><i class="fas fa-trophy"></i> 项目数：1个</span>
                             </div>
                         </div>
-                        
+
                         <div class="path-timeline">
                             <!-- Timeline items will be populated by JavaScript -->
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Progress Tracking -->
                 <div class="progress-section">
                     <h3>学习进度</h3>
                     <div class="progress-container">
                         <div class="progress-bar">
-                            <div class="progress-fill" id="learning-progress" style="width: 0%"></div>
+                            <div class="progress-fill" id="learning-progress"></div>
                         </div>
                         <div class="progress-info">
                             <span id="progress-text">还未开始学习</span>
@@ -377,59 +380,59 @@
                         通过实际代码理解DDD概念和实现
                     </p>
                 </div>
-                
+
                 <div class="examples-container">
                     <div class="examples-sidebar">
                         <div class="examples-categories">
                             <h4>示例分类</h4>
                             <div class="category-list">
-                                <button class="category-item active" data-category="domain-modeling">
+                                <button type="button" class="category-item active" data-category="domain-modeling">
                                     <i class="fas fa-cubes"></i>
                                     <span>领域建模</span>
                                 </button>
-                                <button class="category-item" data-category="aggregates">
+                                <button type="button" class="category-item" data-category="aggregates">
                                     <i class="fas fa-object-group"></i>
                                     <span>聚合设计</span>
                                 </button>
-                                <button class="category-item" data-category="repositories">
+                                <button type="button" class="category-item" data-category="repositories">
                                     <i class="fas fa-database"></i>
                                     <span>仓储模式</span>
                                 </button>
-                                <button class="category-item" data-category="services">
+                                <button type="button" class="category-item" data-category="services">
                                     <i class="fas fa-cogs"></i>
                                     <span>领域服务</span>
                                 </button>
-                                <button class="category-item" data-category="events">
+                                <button type="button" class="category-item" data-category="events">
                                     <i class="fas fa-broadcast-tower"></i>
                                     <span>领域事件</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="examples-content">
                         <div class="example-header">
                             <h3 id="example-title">选择一个示例分类</h3>
                             <div class="example-actions">
-                                <button class="btn btn-small" id="run-code">
+                                <button type="button" class="btn btn-small" id="run-code">
                                     <i class="fas fa-play"></i> 运行
                                 </button>
-                                <button class="btn btn-small btn-secondary" id="copy-code">
+                                <button type="button" class="btn btn-small btn-secondary" id="copy-code">
                                     <i class="fas fa-copy"></i> 复制
                                 </button>
-                                <button class="btn btn-small btn-secondary" id="download-code">
+                                <button type="button" class="btn btn-small btn-secondary" id="download-code">
                                     <i class="fas fa-download"></i> 下载
                                 </button>
                             </div>
                         </div>
-                        
+
                         <div class="code-container">
                             <div class="code-tabs">
-                                <button class="code-tab active" data-file="main">main.py</button>
-                                <button class="code-tab" data-file="models">models.py</button>
-                                <button class="code-tab" data-file="tests">tests.py</button>
+                                <button type="button" class="code-tab active" data-file="main">main.py</button>
+                                <button type="button" class="code-tab" data-file="models">models.py</button>
+                                <button type="button" class="code-tab" data-file="tests">tests.py</button>
                             </div>
-                            
+
                             <div class="code-editor" id="code-editor">
                                 <pre><code class="language-python" id="code-content">
 # 选择左侧的示例分类查看代码
@@ -437,11 +440,11 @@ print("欢迎使用Python DDD学习平台")
                                 </code></pre>
                             </div>
                         </div>
-                        
+
                         <div class="output-container">
                             <div class="output-header">
                                 <h4>运行结果</h4>
-                                <button class="btn btn-small" id="clear-output">
+                                <button type="button" class="btn btn-small" id="clear-output">
                                     <i class="fas fa-trash"></i> 清空
                                 </button>
                             </div>
@@ -465,7 +468,7 @@ print("欢迎使用Python DDD学习平台")
                         精选的书籍、文章、视频和工具推荐
                     </p>
                 </div>
-                
+
                 <div class="resources-grid">
                     <div class="resource-category">
                         <div class="category-header">
@@ -489,7 +492,7 @@ print("欢迎使用Python DDD学习平台")
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="resource-category">
                         <div class="category-header">
                             <h3><i class="fas fa-video"></i> 视频教程</h3>
@@ -507,7 +510,7 @@ print("欢迎使用Python DDD学习平台")
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="resource-category">
                         <div class="category-header">
                             <h3><i class="fas fa-tools"></i> 开发工具</h3>
@@ -525,7 +528,7 @@ print("欢迎使用Python DDD学习平台")
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="resource-category">
                         <div class="category-header">
                             <h3><i class="fas fa-link"></i> 有用链接</h3>
@@ -561,7 +564,7 @@ print("欢迎使用Python DDD学习平台")
                         <a href="#" aria-label="微信"><i class="fab fa-weixin"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>快速链接</h4>
                     <ul class="footer-links">
@@ -571,7 +574,7 @@ print("欢迎使用Python DDD学习平台")
                         <li><a href="#examples">代码示例</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>学习资源</h4>
                     <ul class="footer-links">
@@ -581,7 +584,7 @@ print("欢迎使用Python DDD学习平台")
                         <li><a href="#resources">社区论坛</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>联系我们</h4>
                     <div class="contact-info">
@@ -590,7 +593,7 @@ print("欢迎使用Python DDD学习平台")
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2025 Python DDD 学习平台. All rights reserved.</p>
                 <p>Built with ❤️ for Python developers</p>
@@ -599,7 +602,7 @@ print("欢迎使用Python DDD学习平台")
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" aria-label="回到顶部">
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="回到顶部">
         <i class="fas fa-arrow-up"></i>
     </button>
 

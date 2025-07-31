@@ -1,5 +1,11 @@
 /* Component Styles */
 
+/* Progress bar component styles */
+.progress-fill {
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
 /* Button Components */
 .btn {
   display: inline-flex;
